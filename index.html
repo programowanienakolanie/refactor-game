@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="./images/space_15.png">
+		<link rel="stylesheet" href="./style.css">
+		<script src="./point_db.js">
+		</script>
+		<script src="./script.js">	</script>
+	</head>
+	<body onload="loadEnemy();">
+	<input type="range" id="player" min="0" max="99" step="any" oninput="interact(this.value);" onchange="interact(this.value);"></input>
+	<div style="display:flex;bottom:0; position:fixed;align:center;justify-content:space-around;width:100vw;">
+		<span style="color:#9c2ee6">experience: <span id="exp"></span></span>
+		<span style="color:#82c120">health: <span id="health"></span></span>
+		<span style="color:#cc933d">lives: <span id="hearts">❤️❤️❤️</span></span>
+	</div>
+	</body>
+</html>

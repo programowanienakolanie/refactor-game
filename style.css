@@ -1,0 +1,57 @@
+:root{
+	--image: url("./images/space_14.png");
+	--image2: url("./images/space_15.png");
+}
+html{
+	background: no-repeat linear-gradient(to bottom, #0e0522 , #0e0522 , #060480 , #0d106c , #251377 , #0e0522 , #0e0522);
+	background-attachment: fixed;
+	background-size: cover;
+}
+*{
+	image-rendering: pixelated;
+	transition: 1s ease-out;
+}
+input[type="range"]{
+	position: fixed;
+	bottom:20vh;
+	right: 0;
+	left:0;
+	margin: 0;
+	width: 100%;
+	appearance: none;
+	-webkit-appearance: none;
+	background:none;
+i}
+
+input[type="range"]::-webkit-slider-runnable-track,input[type="range"]::-moz-range-track {
+	background: transparent;
+	margin:0;
+	border:0;
+	padding:0;
+}
+img{
+	align:center;
+	transform: scale(3) perspective(200px) rotateX(30deg);
+	position:fixed;
+	background:none;
+}
+.enemy{
+	align:center;
+	transform: perspective(200px) rotateX(30deg);
+	position:fixed;
+	background:none;
+
+}
+input[type="range"]::-webkit-slider-thumb,input[type="range"]::-moz-range-thumb{
+	counter-reset: variable var(--image);
+	width: 96px;
+	height: 96px;
+	border:none;
+	transform: scale(4) perspective(100px) rotateX(40deg);
+	background-color:transparent;
+	background: center no-repeat var(--image);
+	position:relative;
+}
+input[type="range"]:hover::-webkit-slider-thumb,input[type="range"]:hover::-moz-range-thumb{
+	background: center no-repeat var(--image2);
+}
